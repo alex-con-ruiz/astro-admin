@@ -1,4 +1,6 @@
 ---
+/* export const prerender = true; */
+
 import Layout from "@layouts/Layout.astro";
 
 const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
@@ -6,6 +8,8 @@ const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
 if (!isAuthenticated) { 
     return Astro.redirect("/forbidden");
 }
+
+export const prerender = false;
 ---
 
 <Layout title="Dashboard">
