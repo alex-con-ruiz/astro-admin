@@ -7,6 +7,8 @@ const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
 if(isAuthenticated) {
 	return Astro.redirect('./admin/dashboard');
 }
+
+export const prerender = false;
 ---
 
 <Layout title="Admin">
