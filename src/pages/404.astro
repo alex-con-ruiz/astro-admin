@@ -1,0 +1,57 @@
+---
+import CenterLayout from "@layouts/CenterLayout.astro";
+import Layout from "@layouts/Layout.astro";
+
+const fromAdmin = Astro.url.pathname.includes("/admin");
+
+const homeUrl = fromAdmin ? "/admin" : "/";
+---
+
+<Layout title="forbidden">
+  <CenterLayout va_center>
+    <section class="instructions">
+      <h1>404</h1>
+      <p>
+        Lo sentimos la pagina <code>No Existe</code><br />
+        <a href={homeUrl}>
+          <strong>Ir a inicio</strong>
+      </a>
+      </p>
+    </section>
+  </CenterLayout>
+</Layout>
+
+<style lang="scss">
+  .instructions {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(var(--accent-dark), 0.77);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 0.44),
+      rgba(var(--accent-dark), 0.66)
+    );
+
+    h1{
+      border: 1px solid rgba(var(--accent-light), 0.27);
+      padding: 0.1em .5em;
+      border-radius: 8px;
+      font-size: 70px;
+      margin-right: .5em;
+    }
+  
+    code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+
+    strong {
+      color: rgb(var(--accent-light));
+    }
+  }
+</style>

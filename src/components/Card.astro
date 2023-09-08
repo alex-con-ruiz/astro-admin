@@ -1,0 +1,46 @@
+---
+const headerExist = Astro.slots.has('card-header')
+const footerExist = Astro.slots.has('card-footer')
+---
+
+<section class="card">
+	{headerExist &&
+		<div class="card-header">
+			<slot name="card-header"/>
+		</div>
+	}
+	<div class="card-content">
+		<slot name="card-content">
+			Card must contain at least one slot named "card-content"
+		</slot>
+	</div>
+	{footerExist && 
+		<div class="card-footer">
+			<slot name="card-footer"/>
+		</div>
+	}
+</section>
+
+<style lang="scss">
+	.card {
+		display: flex;
+		flex-direction: column;
+		background-color: #23262d;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		border-radius: 8px;
+
+		&-header, &-content, &-footer{
+		padding: 1.5rem;
+		}
+
+		&-header {
+			border-bottom: 1px solid rgba(var(--accent-light), 25%);
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+
+		&-footer{
+			border-top: 1px solid rgba(var(--accent-light), 25%);
+		}
+	}
+</style>

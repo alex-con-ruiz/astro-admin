@@ -1,0 +1,15 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
+
+if (!isAuthenticated) { 
+    return Astro.redirect("/forbidden");
+}
+---
+
+<Layout title="Dashboard">
+    <h1>hola</h1>
+</Layout>
+
+<style></style>

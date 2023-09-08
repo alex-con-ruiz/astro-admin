@@ -1,0 +1,13 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+const isLogged = false;
+
+if(isLogged) {
+	return Astro.redirect('./404');
+}
+---
+
+<Layout title="Admin">
+	Hola
+</Layout>

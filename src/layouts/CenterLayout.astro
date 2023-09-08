@@ -1,0 +1,32 @@
+---
+interface Props {
+	va_center?: boolean | undefined;
+}
+
+const { va_center } = Astro.props
+const className = va_center ? 'va_center' : ''
+---
+
+<section class={className}>
+    <slot/>
+</section>
+
+
+<style>
+    section {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .va_center{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+</style>
