@@ -30,7 +30,7 @@ const onFetchValidation = (type: string, status: number | undefined): IValidatio
     return { gotError: false, message: null };
 }
 
-const validateInput = (value: string = '', type: string, validationMethod: string, fetchStatus: number | undefined): IValidation => {
+const validateInput = (value: string, type: string, validationMethod: string, fetchStatus: number | undefined): IValidation => {
     switch (validationMethod) {
         case 'onFetchValidation':
             if (fetchStatus && fetchStatus === FETCH_STATUS_OK) return { gotError: false, message: null };

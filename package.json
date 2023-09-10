@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@astrojs/react": "^3.0.2",
@@ -23,5 +24,8 @@
     "sass": "^1.66.1",
     "universal-cookie": "^6.1.1",
     "vitest": "^0.34.4"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^0.34.4"
   }
 }

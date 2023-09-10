@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1694362078640" clover="3.2.0">
+  <project timestamp="1694362078640" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2" elements="32" coveredelements="32" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
+    <file name="validations.ts" path="E:/Dev/Projects/astro-admin/src/components/react/TextField/utils/validations.ts">
+      <metrics statements="14" coveredstatements="14" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="22" type="cond" truecount="2" falsecount="0"/>
+      <line num="8" count="17" type="stmt"/>
+      <line num="16" count="17" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="7" type="stmt"/>
+      <line num="23" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="24" count="5" type="stmt"/>
+      <line num="30" count="5" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="34" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
