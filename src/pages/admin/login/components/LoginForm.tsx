@@ -3,7 +3,7 @@ import { map } from 'nanostores';
 import { useStore } from '@nanostores/react';
 import Cookies from 'universal-cookie';
 import Styles from './styles.module.scss';
-import TextField from '@components/react/TextField/index';
+import TextField from '@components/react/TextField/Textfield';
 import type { ValidationMethod } from '@components/react/TextField/types';
 
 const inputValues = map<Record<string, any>>({
