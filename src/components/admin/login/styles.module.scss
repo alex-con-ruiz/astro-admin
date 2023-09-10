@@ -1,34 +1,5 @@
-.form{
+.form {
     display: flex;
     flex-direction: column;
     font-family: monospace;
-
-    button{
-        margin-top: 20px;
-        border-radius: 6px;
-        background-color: rgb(var(--accent-dark), 50%);
-        border: 1px solid rgba(var(--accent-light), 25%);
-        cursor: pointer;
-        transition: all .2s ease-in;
-        font-weight: bold;
-        font-size: 1em;
-        padding: .7em;
-        
-        &:hover{
-            background-color: rgb(var(--accent-dark), 90%);
-        }
-    }
-
-    a{
-        position: absolute;
-        z-index: -1;
-        display: none;
-    }
-
-
-    .error{
-        &-length{
-            border-color: red;
-        }
-    }
 }

@@ -5,6 +5,7 @@ import Cookies from 'universal-cookie';
 import Styles from './styles.module.scss';
 import TextField from '@components/react/TextField';
 import type { ValidationMethod } from '@components/react/TextField/types';
+import Button from '@components/react/Button';
 
 const inputValues = map<Record<string, any>>({
     username: '',
@@ -79,7 +80,7 @@ const LoginForm = (): ReactElement => {
                     disabled={userFetchStatus.status === undefined || userFetchStatus.status !== 200}
                     behavior='onBlur'
                 />
-                <button onClick={handleLoginFrom}>Ingresar</button>
+                <Button dispatchEvent={handleLoginFrom} disabled>Ingresar</Button>
             </form>
         </>
     );
