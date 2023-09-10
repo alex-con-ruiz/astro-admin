@@ -1,0 +1,32 @@
+.inputBase {
+    margin-bottom: 20px;
+    height: 45px;
+    outline: none;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    border-radius: 4px;
+    color-scheme: light;
+    padding: 0 1em;
+}
+
+.--inputError {
+    border: 2px solid rgba(var(--accent-error-light), 70%);
+}
+
+.--disabled{
+    background-color: rgba(var(--accent-light), 10%);
+    border: 1px solid rgba(var(--accent-light), 10%);
+    color: rgba(var(--accent-light), 50%);
+}
+
+// helper
+.--helperOn{
+    margin-bottom: 0;
+}
+
+.helper{
+    margin-left: .5em;
+    margin-top: .5rem;
+    margin-bottom: 20px;
+    font-size: .8rem;
+    color: rgba(var(--accent-error-light), 100%);
+}

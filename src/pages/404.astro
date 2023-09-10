@@ -5,6 +5,8 @@ import Layout from "@layouts/Layout.astro";
 const fromAdmin = Astro.url.pathname.includes("/admin");
 
 const homeUrl = fromAdmin ? "/admin" : "/";
+
+export const prerender = false;
 ---
 
 <Layout title="forbidden">

@@ -1,6 +1,7 @@
 ---
 /* export const prerender = true; */
 
+import CenterLayout from "@layouts/CenterLayout.astro";
 import Layout from "@layouts/Layout.astro";
 
 const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
@@ -8,12 +9,28 @@ const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
 if (!isAuthenticated) { 
     return Astro.redirect("/forbidden");
 }
-
-export const prerender = false;
 ---
 
 <Layout title="Dashboard">
-    <h1>hola</h1>
+    <section>
+        <aside>as</aside>
+        <section>b</section>
+    </section>
 </Layout>
 
-<style></style>
+<style lang="scss">
+    section {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: "aside aside main main main main main main main";
+
+        aside {
+            grid-area: aside;
+        }
+        section {
+            grid-area: main;
+            height: 100vh;
+            background-color: #f5f5f595;
+        }
+    }
+</style>

@@ -1,20 +1,22 @@
 ---
-import Card from "@components/Card.astro";
+import Card from "@components/astro/Card.astro";
 import CenterLayout from "@layouts/CenterLayout.astro";
 import LoginForm from "./components/LoginForm";
 ---
 
 <CenterLayout>
-	<h1>Bienvenido al <span class="text-gradient">Admin</span></h1>
-	<p class="instructions">
-		Ingreso al admin de <code>Tienda de construccion</code>
-		<br />
-		<strong>Para solicitar acceso</strong> test@test.com.
-	</p>
-	<section class="link-card-grid">
-		<Card>
-			<LoginForm slot="card-content" client:visible/>
-		</Card>
+	<section>
+		<h1>Bienvenido al <span class="text-gradient">Admin</span></h1>
+		<p class="instructions">
+			Ingreso al admin de <code>Tienda de construccion</code>
+			<br />
+			<strong>Para solicitar acceso</strong> test@test.com.
+		</p>
+		<section class="link-card-grid">
+			<Card>
+				<LoginForm slot="card-content" client:visible />
+			</Card>
+		</section>
 	</section>
 </CenterLayout>
 

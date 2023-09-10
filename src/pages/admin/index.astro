@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Login from "@containers/login/index.astro";
+import Login from "@admin/login/index.astro";
 
 const isAuthenticated = Astro.cookies.get("auth")?.json() || false;
 
