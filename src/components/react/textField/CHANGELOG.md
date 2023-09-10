@@ -1,5 +1,9 @@
 # Component Textfield 
 
+#### Added - (10-9-23) [Commit]: [517174a](https://github.com/alex-con-ruiz/astro-admin/commit/517174a880fabccd464fb9dd5f009071bca03f0c)
+    - Added Test Coverage
+    - Extended some tests
+
 #### Added - (10-9-23) [Commit]: [5822c14](https://github.com/alex-con-ruiz/astro-admin/commit/5822c14ddc8108f39a2ec7d16dbf329ee6b8bf5d)
     - Added Test with Vitest
     - Added Test for validation methods
