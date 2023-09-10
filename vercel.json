@@ -1,7 +1,5 @@
 {
-    "git": {
-      "deploymentEnabled": {
-        "feature/admin-login": false
-      }
-    }
+  "git": {
+    "deploymentEnabled": false
   }
+}
