@@ -12,6 +12,7 @@ import type { TextFieldProps } from './types';
  * @param {string} props.placeholder - Input placeholder.
  * @param {function} props.eventDispatch - Function to dispatch input value.
  * @param {string} props.behavior - Input behavior ('onBlur', 'onFocus', 'onChange').
+ * @param {string} props.disabled - Input disabled status.
  * @param {object} props.validationMethod - Validation method type -> ValidationMethod.
  * @returns {JSX.Element}
  * 
@@ -22,6 +23,7 @@ import type { TextFieldProps } from './types';
         placeholder='Usuario'
         eventDispatch={inputHandler}
         validationMethod={userFetchStatus}
+        disabled={false}
         behavior='onBlur'
     />
  */
@@ -73,7 +75,7 @@ const TextField = ({ type, name, placeholder, eventDispatch, behavior = 'onBlur'
 
     return (
         <>
-            <label>{placeholder}:</label>
+            {false ? <label>{placeholder}:</label> : null}
             <input
                 className={classNames}
                 type={type}

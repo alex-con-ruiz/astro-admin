@@ -1,13 +1,6 @@
 import type { IValidation } from "../types";
 
-const DEFAULT_LENGTH = 8;
 const FETCH_STATUS_OK = 200;
-
-const lengthValidation = (value: string, length: number = DEFAULT_LENGTH) => {
-    if (value.length < length) {
-        return `Must be at least ${length} characters`;
-    }
-}
 
 const onFetchValidation = (type: string, status: number | undefined): IValidation => {
     if (!status) return { gotError: false, message: null };
@@ -47,5 +40,5 @@ const validateInput = (value: string = '', type: string, validationMethod: strin
             return { gotError: false, message: null };
     }
 };
-
+export { onFetchValidation };
 export default validateInput;

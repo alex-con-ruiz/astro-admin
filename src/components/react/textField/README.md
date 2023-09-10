@@ -1,6 +1,5 @@
 
 # Component Textfield 
- ### React component for text input handlers:
  
 ## Example
 
