@@ -3,8 +3,8 @@ import { map } from 'nanostores';
 import { useStore } from '@nanostores/react';
 import Cookies from 'universal-cookie';
 import Styles from './styles.module.scss';
-import TextField from '@components/react/TextField';
-import type { ValidationMethod } from '@components/react/TextField/types';
+import TextField from '@components/react/textField';
+import type { ValidationMethod } from '@components/react/textField/types';
 import Button from '@components/react/Button';
 
 const inputValues = map<Record<string, any>>({
