@@ -1,5 +1,8 @@
+type dispatchEvent = () => void;
+
 export type ButtonProps = {
-    dispatchEvent: Function;
+    dispatchEvent: dispatchEvent;
     children: React.ReactNode | string;
     disabled?: boolean;
+    fwidth?: boolean;
 };

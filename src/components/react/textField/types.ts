@@ -35,7 +35,7 @@ export type TextFieldProps = {
     name: string;
     placeholder: string;
     behavior?: string;
-    eventDispatch: Function;
+    eventDispatch: (value: string, type: string) => void;
     disabled?: boolean;
     validationMethod: ValidationMethod
 }
