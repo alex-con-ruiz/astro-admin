@@ -1,25 +1,17 @@
-import jwt from 'jsonwebtoken';
 import type { APIRoute } from 'astro';
-import { handleParams } from './utils/handleParams';
+import { authorization } from './utils/handleAuth';
 import { handleResponse } from './utils/handleResponse';
 
-type Params = {
-	msg: string;
-}
+export const GET: APIRoute = async ({ request }) => {
+	try {
+		await authorization(request.headers);
 
-export const GET: APIRoute = ({ request }) => {
-	const params: Params = handleParams<Params>(request);
+		return handleResponse<Record<string, string>>(200, {}, { msg: 'jeje' });
+	} catch (err) {
+		const error = err as Error;
+		const code = error.name === 'JsonWebTokenError' ? 400 : 403;
 
-	const token = jwt.sign({username: 'alex', password: 'payaso'}, `${process.env.CLIENT_SECRET}` , { expiresIn: 60 });
-
-	console.log(token);
-	
-	jwt.verify(token, process.env.CLIENT_SECRET as string, (err: any, user: any) => {
-		console.log(err, user);
-	});
-
-
-	return handleResponse<string>(200, {}, params.msg);
+		return handleResponse<Record<string, string>>(code, {}, { msg: error.message });
+	}
 };
-
 
