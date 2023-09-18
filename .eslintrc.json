@@ -18,6 +18,8 @@
         "react"
     ],
     "rules": {
+        "no-multiple-empty-lines": "warn",
+        "eol-last":"error",
         "react/react-in-jsx-scope": "off",
         "indent": [
             "error",
